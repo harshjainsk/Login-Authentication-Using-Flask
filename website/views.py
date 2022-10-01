@@ -1,4 +1,4 @@
-from flask import Blueprint
+from flask import Blueprint, render_template
 
 """
     It says that this file is the blueprint of our application 
@@ -7,6 +7,7 @@ from flask import Blueprint
 
 views = Blueprint('views', __name__)
 
+
 @views.route('/')
 def home():
-    return "Test"
+    return render_template("home.html")
